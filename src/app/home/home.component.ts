@@ -43,8 +43,14 @@ export class HomeComponent implements OnInit {
 	btnText: string = 'Add Note Title ';
 	todoText: string;
 	todos = [];
+  skinColor: string;
 
-
+  skins = [
+    { name: "Yellow", value: 1 },
+    { name: "Black", value: 2 },
+    { name: "White", value: 3 },
+    { name: "Blue/Default", value: 4 }
+  ]
 
 	constructor(private _data: DataService) { }
 
@@ -73,5 +79,27 @@ export class HomeComponent implements OnInit {
     console.log(this.todos);
 	}
 
+  selectSkin(){
+    
+    if(this.skinColor == "Yellow"){;
+      $('html').css('--main-lighter-color', "yellow");
+      $('html').css('--main-bg-color', 'black');
+      $('input, .btn, textarea, select').css({'background-color':'black','color':'white'});
+    }else if(this.skinColor == "Blue/Default"){
+      $('html').css('--main-lighter-color', "#00BCD4");
+      $('html').css('--main-bg-color', '#fafafa');
+      $('input, .btn, textarea, select').css({'background-color':'#fafafa9e','color':'black'});
+    }else if(this.skinColor == "Black"){
+      $('html').css('--main-lighter-color', "black");
+      $('html').css('--main-bg-color', '#fafafa');
+      $('input, .btn, textarea, select').css({'background-color':'#fafafa9e','color':'black'});
+    }else if(this.skinColor == "White"){
+      $('html').css('--main-lighter-color', "#fafafa");
+      $('html').css('--main-bg-color', 'black');
+      $('input, .btn, textarea, select').css({'background-color':'#000000ad','color':'white'});
+    }
+    
+
+  }
 
 }

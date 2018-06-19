@@ -24,7 +24,7 @@ body{
 	color: var(--main-font-color);
 }
 
-input, .btn, textarea {
+input, .btn, textarea, select {
     background-color: #fafafa9e;
     padding: .5em 10px;
     border: transparent;	
@@ -57,7 +57,10 @@ input, .btn, textarea {
 	text-align: center;
 }
 
-
+.skin-container{
+	display: block;
+	margin-top: 10px;
+}
 
 @media (max-width: 991px) {
 	input, .btn {
