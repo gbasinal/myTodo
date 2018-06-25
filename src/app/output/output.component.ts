@@ -6,6 +6,7 @@ import 'jquery-ui/ui/widgets/sortable.js';
 import 'jquery-ui/ui/widgets/draggable.js';
 import 'jquery-ui/ui/disable-selection.js';
 
+
 @Component({
   selector: 'app-output',
   templateUrl: './output.component.html',
@@ -61,10 +62,11 @@ export class OutputComponent implements OnInit {
     //    console.log('woeking');
     // });
 
-  
 
 
   }
+
+
 
   dragItem(i){
     $('#outputBox'+ i).draggable({

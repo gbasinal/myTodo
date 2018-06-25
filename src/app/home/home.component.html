@@ -18,8 +18,8 @@
 					<input type="text" name="item" placeholder="I will..." [(ngModel)]="todoText" required>
 					<input type="submit" class="btn" [value]="btnText" (click)="addItem()">
 					<label for="theme-selection" class="skin-container">Skin Color:</label>
-					<select name="skinOptions" [(ngModel)]="skinColor" (change)="selectSkin()">
-						<option *ngFor ="let skin of skins">{{skin.name}}</option>
+					<select name="skinOptions" [(ngModel)]="skinColor" (change)="selectSkin()" placeholder="skinOptions">
+						<option *ngFor ="let skin of skins" value={{skin.name}}>{{skin.name}}</option>
 					</select>
 				</form>
 			</div>

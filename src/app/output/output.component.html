@@ -1,12 +1,12 @@
 
-<div class="container ">
+<div class="container " title="Double Click the move icon to try moving it!">
 	<div>&nbsp;</div>
 	<div class="output">
 	
 		<ul class="output-container">
 			<li  *ngFor="let todo of todos;  let i = index " [@flyInOut]>
 				<div class="output-box"  [id]="'outputBox'+ i" >
-					<i class="move-icon text-center fa fa-arrows" (click)="dragItem(i)"></i>				
+					<i class="move-icon text-center fa fa-arrows" (click)="dragItem(i)" (mouseenter)="itemHover(i)"></i>				
 					<span style="float:right;cursor: pointer" (click)="removeItem(i)"><i class="fa fa-remove"></i></span>
 
 					<h3>{{ todo }}</h3>

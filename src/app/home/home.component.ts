@@ -82,21 +82,25 @@ export class HomeComponent implements OnInit {
   selectSkin(){
     
     if(this.skinColor == "Yellow"){;
-      $('html').css('--main-lighter-color', "yellow");
-      $('html').css('--main-bg-color', 'black');
-      $('input, .btn, textarea, select').css({'background-color':'black','color':'white'});
+      document.documentElement.style.setProperty('--main-lighter-color', "yellow");
+      document.documentElement.style.setProperty('--main-bg-color', 'black');
+      document.documentElement.style.setProperty('--form-bg', 'black');
+      document.documentElement.style.setProperty('--form-color', 'white');
     }else if(this.skinColor == "Blue/Default"){
-      $('html').css('--main-lighter-color', "#00BCD4");
-      $('html').css('--main-bg-color', '#fafafa');
-      $('input, .btn, textarea, select').css({'background-color':'#fafafa9e','color':'black'});
+      document.documentElement.style.setProperty('--main-lighter-color', "#00BCD4");
+      document.documentElement.style.setProperty('--main-bg-color', '#fafafa');
+      document.documentElement.style.setProperty('--form-bg', '#fafafa9e');
+      document.documentElement.style.setProperty('--form-color', 'black');      
     }else if(this.skinColor == "Black"){
-      $('html').css('--main-lighter-color', "black");
-      $('html').css('--main-bg-color', '#fafafa');
-      $('input, .btn, textarea, select').css({'background-color':'#fafafa9e','color':'black'});
-    }else if(this.skinColor == "White"){
-      $('html').css('--main-lighter-color', "#fafafa");
-      $('html').css('--main-bg-color', 'black');
-      $('input, .btn, textarea, select').css({'background-color':'#000000ad','color':'white'});
+      document.documentElement.style.setProperty('--main-lighter-color', "black");
+      document.documentElement.style.setProperty('--main-bg-color', '#fafafa');
+      document.documentElement.style.setProperty('--form-bg', '#fafafa9e');
+      document.documentElement.style.setProperty('--form-color', 'black');      
+    }else{
+      document.documentElement.style.setProperty('--main-lighter-color', "#fafafa");
+      document.documentElement.style.setProperty('--main-bg-color', 'black');
+      document.documentElement.style.setProperty('--form-bg', 'black');
+      document.documentElement.style.setProperty('--form-color', 'white');      
     }
     
 

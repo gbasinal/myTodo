@@ -3,7 +3,7 @@
 
 
 .about-desc {
-	color: white;
+	color: var(--main-bg-color);
 	padding: 1em;
 	font-family: 'Didact Gothic', sans-serif;
 	margin: auto;
@@ -22,5 +22,5 @@
 	font-family: 'Righteous', cursive;
 	font-size: 1.6em;
 	text-decoration: underline;	
-	color: white;
+	color: var(--main-bg-color);
 }

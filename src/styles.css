@@ -7,6 +7,8 @@
 	--main-lighter-color: #00BCD4   ;
 	--shadow: 0px 0px 10px 6px rgba(0,0,0,0.75);
 	--base-font : 'Didact Gothic', sans-serif;
+	--form-bg: #fafafa9e;
+	--form-color:black;
 
 };
 
@@ -25,10 +27,14 @@ body{
 }
 
 input, .btn, textarea, select {
-    background-color: #fafafa9e;
+    background-color: var(--form-bg);
+    color: var(--form-color);
     padding: .5em 10px;
     border: transparent;	
     border-radius: 5px;
+}
+textarea{
+	resize: none;
 }
 .container {
 	display: grid;
